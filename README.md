@@ -6,7 +6,7 @@
 
 ## Contents
 - [Readings](/Readings/README.md): Detailed documents and resources for study.
-- [Challenges](/Challenges/Challenge1.pyChallenges/README.md): Practical exercises and assignments.
+- [Challenges](/Challenges/Challenge1.py/README.md): Practical exercises and assignments.
 - [Things I want to know more about](https://github.com/rgonzo1355/Ops-401/blob/main/Readings/Thingstoknow.md): Future learning.
 
 [Any additional sections or information you wish to include]
