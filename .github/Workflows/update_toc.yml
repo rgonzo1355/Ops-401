@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-
 name: Update Table of Contents
 
 on:
