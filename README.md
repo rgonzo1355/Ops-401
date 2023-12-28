@@ -7,5 +7,6 @@
 ## Contents
 - [Readings](/Readings/README.md): Detailed documents and resources for study.
 - [Challenges](/Challenges/README.md): Practical exercises and assignments.
+- [Things I want to know more about]( put the link here)
 
 [Any additional sections or information you wish to include]
