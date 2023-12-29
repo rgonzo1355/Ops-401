@@ -1,5 +1,5 @@
 # Table of Contents
 
-    - [README](ReadMe.md)
-    - [Readings]()
-    - [Things to Know](Thingstoknow.md)
+ - [README](ReadMe.md)
+ - [Readings]()
+ - [Things to Know](Thingstoknow.md)
