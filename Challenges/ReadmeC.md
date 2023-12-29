@@ -4,9 +4,8 @@ This section contains practical challenges and exercises related to the 401 Cybe
 
 ## Table of Contents
 
-- [Challenge 1: Network Security](Challenge1.md) - A hands-on task focusing on network security principles.
+- [Challenge 1: Title of Challenge](Challenge1.py)
 - [Challenge 2: Ethical Hacking Basics](Challenge2.md) - A beginner's guide to ethical hacking practices.
-- [Challenge 3: Cryptography](Challenge3.md) - Exploring the fundamentals of cryptography.
 - ... [additional challenges here]
 
 ## Submission Guidelines
