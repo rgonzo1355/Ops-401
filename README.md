@@ -1,11 +1,11 @@
-# Ops-401 Repository
+# 401 Cybersecurity Course Repository
 
 ## Introduction
-[Short intro about the course and repository purpose]
+Brief introduction about the purpose and content of this repository.
 
 ## Contents
-- [Readings](./Readings/README.md): Detailed documents and resources for study.
-- [Challenges](./Challenges/README.md): Practical exercises and assignments.
-- [Things I want to know more about](./Readings/Thingstoknow.md): Future learning.
+- [Readings](/Readings/ReadmeR.md): Detailed documents and resources for study.
+- [Challenges](/Challenges/ReadmeC.md): Practical exercises and assignments.
+- [Things to Know More About](/ThingsToKnowMoreAbout/ReadmeT.md): Topics and areas for future exploration and learning.
 
-[Any additional sections or information you wish to include]
+[Any additional information or sections]
