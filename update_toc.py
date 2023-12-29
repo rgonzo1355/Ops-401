@@ -9,18 +9,14 @@ def generate_toc(directory):
     """Generates a table of contents for the given directory."""
     toc = ["# Table of Contents\n"]
     root_path = Path(directory)
-    for root, dirs, files in os.walk(root_path):
-        root_path_obj = Path(root)
-        level = len(root_path_obj.relative_to(root_path).parts)
-        indent = ' ' * 4 * (level - 1)
-        if root_path_obj.name != root_path.name:
-            toc.append(f"{indent}- {root_path_obj.name}/")
-        subindent = ' ' * 4 * level
-        for file_name in files:
-            file_path = root_path_obj / file_name
-            if is_valid_file(file_path):
-                relative_path = file_path.relative_to(root_path).as_posix().replace(' ', '%20')
-                toc.append(f"{subindent}- [{file_path.name}]({relative_path})")
+
+    # List files directly in the directory (not in subdirectories)
+    for file_name in os.listdir(root_path):
+        file_path = root_path / file_name
+        if file_path.is_file() and is_valid_file(file_path):
+            relative_path = file_path.relative_to(root_path).as_posix().replace(' ', '%20')
+            toc.append(f"- [{file_path.name}]({relative_path})")
+
     return '\n'.join(toc)
 
 def update_readme(directory, toc):
