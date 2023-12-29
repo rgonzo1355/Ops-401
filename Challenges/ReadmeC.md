@@ -4,9 +4,7 @@ This section contains practical challenges and exercises related to the 401 Cybe
 
 ## Table of Contents
 
-- [Challenge 1: Title of Challenge](Challenge1.py)
-- [Challenge 2: Ethical Hacking Basics](Challenge2.md) - A beginner's guide to ethical hacking practices.
-- ... [additional challenges here]
+- [Challenges]()
 
 ## Submission Guidelines
 
