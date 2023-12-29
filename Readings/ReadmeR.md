@@ -1,7 +1,8 @@
 # Table of Contents
 
-- [Read: Class 1](Read%3A1.md)
-- [Read: Class 2](Read%3A2.md)
-- [Read: Class 3](Read%3A3.md)
-- [Things to Know More About](ReadmeT.md)
-- [Other Relevant Reading](Thingstoknow.md)  <!-- If this is another relevant document -->
+- [README](README.md)
+- [ReadmeT](ReadmeT.md)
+- [Read:1](Read:1.md)
+- [Thingstoknow](Thingstoknow.md)
+- [Read:3](Read:3.md)
+- [Read:2](Read:2.md)
