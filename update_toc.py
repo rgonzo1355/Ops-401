@@ -5,8 +5,8 @@ def is_valid_file(file_path, readme_name, valid_extensions=['.md', '.py']):
     """Checks if a file is valid based on its extension and name."""
     return file_path.suffix in valid_extensions and file_path.name != readme_name
 
-def generate_toc(directory, readme_name):
-    """Generates a table of contents for the given directory."""
+def update_toc(directory, readme_name):
+    """Updates the table of contents (TOC) in the specified README file for the given directory."""
     toc = ["# Table of Contents\n"]
     root_path = Path(directory)
 
@@ -22,7 +22,7 @@ def generate_toc(directory, readme_name):
     with open(readme_path, 'w') as f:
         f.write('\n'.join(toc))
 
-# Updating TOC in ReadmeC.md for Challenges
-generate_toc('/home/rcode/Ops/Ops-401/Challenges', 'ReadmeC.md')
+# Update TOC in ReadmeC.md for Challenges
+update_toc('/home/rcode/Ops/Ops-401/Challenges', 'ReadmeC.md')
 
-print("TOC update completed successfully.")
+print("TOC in ReadmeC.md updated successfully.")
