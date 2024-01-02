@@ -1,5 +1,6 @@
 # Table of Contents
-- [Challenge3](Challenge3.py)
-- [Challenge2](Challenge2.py)
+- [Prep: The Growth Mindset](/Challenges/ReadmeC.md)
 - [Challenge1](Challenge1.py)
-- [ReadmeC](ReadmeC.md)
+- [Challenge2](Challenge2.py)
+- [Challenge3](Challenge3.py)
+
