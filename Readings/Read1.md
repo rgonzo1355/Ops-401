@@ -1,4 +1,3 @@
-This is one is just testing 1
 Rodolfo Gonzalez            01-07-2024
 # Reading Notes
 
@@ -27,6 +26,7 @@ Rodolfo Gonzalez            01-07-2024
      - **Top Level (Privacy)**: The roof, protecting personal information.
 
 ## Additional Materials
+![Alt text](image.png)
 
 ### Videos
 
