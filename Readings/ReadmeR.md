@@ -2,7 +2,7 @@
 
 - [Things to Know more about](ReadmeT.md)
 - [Prep: The Groth Mindset](/Readings/Prep:GrowthMinset.md)
-- [1:Strategic Policy Development](Read1.md)  <!-- Link to 'Read: Class 1' document -->
+- [1: Strategic Policy Development](Read1.md)  <!-- Link to 'Read: Class 1' document -->
 - [Read: Class 2](Read2.md)  <!-- Link to 'Read: Class 2' document -->
 - [Read: Class 3](Read3.md)  <!-- Link to 'Read: Class 3' document -->
 - [Read: Class 4](Read4.md)  <!-- Link to 'Read: Class 4' document -->
