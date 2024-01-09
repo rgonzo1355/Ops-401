@@ -3,50 +3,31 @@
 # Date:                      01/08/2024      
 
 # Purpose: This PowerShell script automatically sets up a screen lock on Windows 10 after a period of time.
+# https://chat.openai.com/share/d332a0bf-301e-4283-afc8-ac3697ce095d.
 
-# Parameters
-param (
-    [int]$InactivityLimit = 350,   # Time of inactivity in seconds before the screen locks (default: 350 seconds)
-    [string]$RegistryPath = "HKCU:\SOFTWARE\Policies\Microsoft\Windows\Control Panel\Desktop",  # Registry path
-    [string]$PropertyName = "ScreenSaveTimeOut",  # Name of the property to be set
-    [string]$BackupPath = "C:\Backup\ScreenLockRegistryBackup.reg"  # Backup file path
-)
+# This sets the time of inactivity in seconds before the screen locks (300 sec = 5 minutes).
+$InactivityLimit = 300
 
-# Error Handling
+# The registry path where the screen lock settings are stored.
+$registryPath = "HKCU:\SOFTWARE\Policies\Microsoft\Windows\Control Panel\Desktop"
+$propertyName = "ScreenSaveTimeOut" # Name of the property to be set.
+$propertyValue = $InactivityLimit # Value of the property (time limit).
+
+# Starts a 'Try' block to handle potential errors.
 Try {
-    # Check if the registry path exists; if not, create it
-    if (!(Test-Path $RegistryPath)) {
-        New-Item -Path $RegistryPath -Force | Out-Null
+    # Checks if the registry path exists; if it does not, the script creates it.
+    if (!(Test-Path $registryPath)) {
+        New-Item -Path $registryPath -Force | Out-Null
     }
 
-    # Backup existing registry value
-    Export-Registry -Path $RegistryPath -BackupPath $BackupPath
+    # Sets the screen save timeout value in the registry.
+    Set-ItemProperty -Path $registryPath -Name $propertyName -Value $propertyValue
 
-    # Enable the screensaver
-    Set-ItemProperty -Path $RegistryPath -Name "ScreenSaveActive" -Value "1"
+    # Activates the screen saver feature.
+    Set-ItemProperty -Path $registryPath -Name "ScreenSaveActive" -Value "1"
 
-    # Set the screen lock timeout
-    Set-ItemProperty -Path $RegistryPath -Name $PropertyName -Value $InactivityLimit
-
-    Write-Host "Screen lock settings successfully configured."
-} 
-Catch {
-    Write-Host "Error: $($Error[0])"
-    # You can add more specific error handling and logging here
+    # Prints a message confirming successful registry update.
+    Write-Host "Registry updated successfully."
+} Catch {
+    Write-Host "Error: $_"
 }
-
-# Function to export registry keys
-function Export-Registry {
-    param (
-        [string]$Path,
-        [string]$BackupPath
-    )
-    try {
-        Write-Host "Backing up registry key to $BackupPath"
-        Export-RegistryKey -Path $Path -LiteralPath $BackupPath -Force
-    }
-    catch {
-        Write-Host "Error exporting registry key: $($_.Exception.Message)"
-    }
-}
-
