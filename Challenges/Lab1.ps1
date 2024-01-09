@@ -31,3 +31,8 @@ Try {
 } Catch {
     Write-Host "Error: $_"
 }
+
+""" Run this codes to test that it is working. 
+Get-ItemProperty -Path "HKCU:\SOFTWARE\Policies\Microsoft\Windows\Control Panel\Desktop" -Name "ScreenSaveTimeOut"
+Get-ItemProperty -Path "HKCU:\SOFTWARE\Policies\Microsoft\Windows\Control Panel\Desktop" -Name "ScreenSaveActive"
+"""
