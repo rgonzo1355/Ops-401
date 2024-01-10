@@ -4,7 +4,7 @@
 - [Prep: The Groth Mindset](/Readings/Prep:GrowthMinset.md)
 - [1: Strategic Policy Development](Read1.md)  <!-- Link to 'Read: Class 1' document -->
 - [2: Cloud Security Principles and Frameworks](Read2.md)  <!-- Link to 'Read: Class 2' document -->
-- [Read: Class 3](Read3.md)  <!-- Link to 'Read: Class 3' document -->
+- [3: Cyber Risk Analysis](Read3.md)  <!-- Link to 'Read: Class 3' document -->
 - [Read: Class 4](Read4.md)  <!-- Link to 'Read: Class 4' document -->
 - [Read: Class 5](Read5.md)  <!-- Link to 'Read: Class 5' document -->
 - [Read: Class 6](Read6.md)  <!-- Link to 'Read: Class 6' document -->
