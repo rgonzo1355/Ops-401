@@ -5,7 +5,7 @@
 - [1: Strategic Policy Development](Read1.md)  <!-- Link to 'Read: Class 1' document -->
 - [2: Cloud Security Principles and Frameworks](Read2.md)  <!-- Link to 'Read: Class 2' document -->
 - [3: Cyber Risk Analysis](Read3.md)  <!-- Link to 'Read: Class 3' document -->
-- [Read: Class 4](Read4.md)  <!-- Link to 'Read: Class 4' document -->
+- [4: Systems hardening with CIS Standards](Read4.md)  <!-- Link to 'Read: Class 4' document -->
 - [Read: Class 5](Read5.md)  <!-- Link to 'Read: Class 5' document -->
 - [Read: Class 6](Read6.md)  <!-- Link to 'Read: Class 6' document -->
 - [Read: Class 7](Read7.md)  <!-- Link to 'Read: Class 7' document -->
