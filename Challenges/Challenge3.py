@@ -13,6 +13,9 @@ Resources:
 https://g.co/bard/share/dc8ba53a59fc 
 https://chat.openai.com/share/329b0313-0214-4226-8bdd-5ef15559dd9c
 https://towardsdatascience.com/how-to-easily-automate-emails-with-python-8b476045c151
+https://chat.openai.com/share/52599ba0-5e50-4a65-8bbd-ec1352b9bafb
+https://towardsdatascience.com/how-to-easily-automate-emails-with-python-8b476045c151
+
 '''
 
 import os
