@@ -11,37 +11,65 @@ The script must:
 
 Resources: 
 https://g.co/bard/share/dc8ba53a59fc 
+https://chat.openai.com/share/329b0313-0214-4226-8bdd-5ef15559dd9c
 https://towardsdatascience.com/how-to-easily-automate-emails-with-python-8b476045c151
 '''
 
 import os
-import subprocess
 import time
+import smtplib
+import getpass
+from email.mime.text import MIMEText
 
-def ping(host):
-    
-    # Function to send an ICMP ping packet to the specified host.
-    
+def ping_host(target_ip):
     try:
-        # Use 'ping' command based on the OS (Windows or non-Windows)
-        response = subprocess.check_output(['ping', '-n', '1', host]) if os.name == 'nt' else subprocess.check_output(['ping', '-c', '1', host])
-        return True  # If ping succeeds, return True
-    except subprocess.CalledProcessError:
-        return False  # If ping fails, return False
+        response = os.system(f"ping -c 1 {target_ip} > /dev/null 2>&1")
+        return response == 0
+    except Exception as e:
+        print(f"Ping error: {str(e)}")
+        return False
 
-def main():
-    host = "8.8.8.8"  # Replace with the IP address you want to ping
-    interval = 2  # Interval in seconds between pings
+def send_email(sender_email, password, recipient_email, subject, body):
+    try:
+        server = smtplib.SMTP('smtp.gmail.com', 587)
+        server.starttls()
+        server.login(sender_email, password)
 
-    while True:
-        timestamp = time.strftime('%Y-%m-%d %H:%M:%S.%f')  # Get current timestamp
-        is_alive = ping(host)  # Check if host is reachable
-        status = "Network Active" if is_alive else "Network Down"  # Set status based on reachability
-        
-        # Print timestamp, status, and destination IP
-        print(f"{timestamp} {status} to {host}")
+        msg = MIMEText(body)
+        msg['Subject'] = subject
+        msg['From'] = sender_email
+        msg['To'] = recipient_email
 
-        time.sleep(interval)  # Wait for the specified interval before the next ping
+        server.sendmail(sender_email, recipient_email, msg.as_string())
+        server.quit()
+        print("Email was sent successfully.")
+    except Exception as e:
+        print("Email NOT sent:", str(e))
 
 if __name__ == "__main__":
-    main()  # Start the main function when the script is executed
+    target_ip = input("Enter the target IP address to monitor: ")
+    sender_email = input("Enter your sender email address: ")
+    password = getpass.getpass("Enter your email App password: ")
+    recipient_email = sender_email
+
+    previous_status = None
+
+    try:
+        while True:
+            is_alive = ping_host(target_ip)
+            current_status = "Active" if is_alive else "Inactive"
+            timestamp = time.strftime("%Y-%m-%d %H:%M:%S.%f")[:-3]
+
+            if current_status != previous_status and previous_status is not None:
+                subject = f"Status Change Detected for {target_ip}"
+                body = f"{timestamp}: Host {target_ip} changed status from {previous_status} to {current_status}"
+                send_email(sender_email, password, recipient_email, subject, body)
+
+            print(f"{timestamp} Network {current_status} to {target_ip}")
+
+            previous_status = current_status
+            time.sleep(10)
+
+    except KeyboardInterrupt:
+        print("Monitoring stopped.")
+
