@@ -1,6 +1,6 @@
-## Data File Encryption
+# Data File Encryption
 
-# Applying The CIA Triad To Your Enterprise File Transfer
+## Applying The CIA Triad To Your Enterprise File Transfer
 
 ## Reading and Discussion Points
 
