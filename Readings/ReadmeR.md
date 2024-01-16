@@ -6,7 +6,7 @@
 - [2: Cloud Security Principles and Frameworks](Read2.md)  <!-- Link to 'Read: Class 2' document -->
 - [3: Cyber Risk Analysis](Read3.md)  <!-- Link to 'Read: Class 3' document -->
 - [4: Systems hardening with CIS Standards](Read4.md)  <!-- Link to 'Read: Class 4' document -->
-- [5: Empty](Read5.md)  <!-- Link to 'Read: Class 5' document -->
+- [5: No 5 reading](Read5.md)  <!-- Link to 'Read: Class 5' document -->
 - [6: Data File Encryption](Read6.md)  <!-- Link to 'Read: Class 6' document -->
 - [Read: Class 7](Read7.md)  <!-- Link to 'Read: Class 7' document -->
 - [Read: Class 8](Read8.md)  <!-- Link to 'Read: Class 8' document -->
