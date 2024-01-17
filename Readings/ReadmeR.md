@@ -8,7 +8,7 @@
 - [4: Systems hardening with CIS Standards](Read4.md)  <!-- Link to 'Read: Class 4' document -->
 - [5: No 5 reading](Read5.md)  <!-- Link to 'Read: Class 5' document -->
 - [6: Data File Encryption](Read6.md)  <!-- Link to 'Read: Class 6' document -->
-- [Read: Class 7](Read7.md)  <!-- Link to 'Read: Class 7' document -->
+- [7: Protecting Data at Rest with Device Encryption](Read7.md)  <!-- Link to 'Read: Class 7' document -->
 - [Read: Class 8](Read8.md)  <!-- Link to 'Read: Class 8' document -->
 - [Read: Class 9](Read9.md)  <!-- Link to 'Read: Class 9' document -->
 - [Read: Class 10](Read10.md)  <!-- Link to 'Read: Class 10' document -->
