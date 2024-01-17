@@ -3,7 +3,8 @@
 # Rodolfo Gonzalez
 # January 16 2024
 
-# Purpose:
+# Purpose:File Encryption Script Part 1 of 3
+
 """The purpose of this code is to create a Python script that allows users to perform file encryption and decryption using the cryptography library. 
 It provides a user-friendly menu-based interface with options to encrypt files, decrypt files, encrypt messages, decrypt messages, and exit the program.
  The script generates an encryption key, ensures secure data handling, and displays answers in blue for clarity.
