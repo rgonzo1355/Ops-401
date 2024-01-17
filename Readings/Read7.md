@@ -10,7 +10,8 @@
 ### Role of Data Encryption in the CIA Triad
 **Explain the role of data encryption in the CIA triad.**
 - Confidentiality: Encryption ensures that only authorized parties can access and understand the data. It protects data from unauthorized access.
-
+-![Alt text](image-3.png)
 ## Resources
 - [Digital Guardian - Data Protection: Data In Transit vs. Data At Rest](https://www.digitalguardian.com/blog/data-protection-data-in-transit-vs-data-at-rest)
 - [YouTube Video: Data Protection and Encryption Explained](https://www.youtube.com/watch?v=Hi9z45-CPs4)
+- [CIA Triad](image-4.png)
