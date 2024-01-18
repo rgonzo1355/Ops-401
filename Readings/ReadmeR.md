@@ -9,8 +9,8 @@
 - [5: No 5 reading](Read5.md)  <!-- Link to 'Read: Class 5' document -->
 - [6: Data File Encryption](Read6.md)  <!-- Link to 'Read: Class 6' document -->
 - [7: Protecting Data at Rest with Device Encryption](Read7.md)  <!-- Link to 'Read: Class 7' document -->
-- [Read: Class 8](Read8.md)  <!-- Link to 'Read: Class 8' document -->
-- [Read: Class 9](Read9.md)  <!-- Link to 'Read: Class 9' document -->
+- [8: Empty](Read8.md)  <!-- Link to 'Read: Class 8' document -->
+- [9: Public Key Infrastructure (PKI)](Read9.md)  <!-- Link to 'Read: Class 9' document -->
 - [Read: Class 10](Read10.md)  <!-- Link to 'Read: Class 10' document -->
 - [Read: Class 11](Read11.md)  <!-- Link to 'Read: Class 11' document -->
 - [Read: Class 12](Read12.md)  <!-- Link to 'Read: Class 12' document -->
