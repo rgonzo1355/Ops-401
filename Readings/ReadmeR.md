@@ -13,7 +13,7 @@
 - [9: Public Key Infrastructure (PKI)](Read9.md)  <!-- Link to 'Read: Class 9' document -->
 - [10: Empty](Read10.md)  <!-- Link to 'Read: Class 10' document -->
 - [11: Setting up Splunk SIEM](Read11.md)  <!-- Link to 'Read: Class 11' document -->
-- [Read: Class 12](Read12.md)  <!-- Link to 'Read: Class 12' document -->
+- [12: Log Analysis with Splunk](Read12.md)  <!-- Link to 'Read: Class 12' document -->
 - [Read: Class 13](Read13.md)  <!-- Link to 'Read: Class 13' document -->
 - [Read: Class 14](Read14.md)  <!-- Link to 'Read: Class 14' document -->
 - [Read: Class 15](Read15.md)  <!-- Link to 'Read: Class 15' document -->
