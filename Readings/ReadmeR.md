@@ -11,8 +11,8 @@
 - [7: Protecting Data at Rest with Device Encryption](Read7.md)  <!-- Link to 'Read: Class 7' document -->
 - [8: Empty](Read8.md)  <!-- Link to 'Read: Class 8' document -->
 - [9: Public Key Infrastructure (PKI)](Read9.md)  <!-- Link to 'Read: Class 9' document -->
-- [Read: Class 10](Read10.md)  <!-- Link to 'Read: Class 10' document -->
-- [Read: Class 11](Read11.md)  <!-- Link to 'Read: Class 11' document -->
+- [10: Empty](Read10.md)  <!-- Link to 'Read: Class 10' document -->
+- [11: Setting up Splunk SIEM](Read11.md)  <!-- Link to 'Read: Class 11' document -->
 - [Read: Class 12](Read12.md)  <!-- Link to 'Read: Class 12' document -->
 - [Read: Class 13](Read13.md)  <!-- Link to 'Read: Class 13' document -->
 - [Read: Class 14](Read14.md)  <!-- Link to 'Read: Class 14' document -->
