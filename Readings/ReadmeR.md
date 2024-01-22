@@ -14,7 +14,7 @@
 - [10: Empty](Read10.md)  <!-- Link to 'Read: Class 10' document -->
 - [11: Setting up Splunk SIEM](Read11.md)  <!-- Link to 'Read: Class 11' document -->
 - [12: Log Analysis with Splunk](Read12.md)  <!-- Link to 'Read: Class 12' document -->
-- [Read: Class 13](Read13.md)  <!-- Link to 'Read: Class 13' document -->
+- [13: Reconstructing a Cloud Attack](Read13.md)  <!-- Link to 'Read: Class 13' document -->
 - [Read: Class 14](Read14.md)  <!-- Link to 'Read: Class 14' document -->
 - [Read: Class 15](Read15.md)  <!-- Link to 'Read: Class 15' document -->
 - [Read: Class 16](Read16.md)  <!-- Link to 'Read: Class 16' document -->
