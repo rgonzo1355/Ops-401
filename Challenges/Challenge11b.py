@@ -1,127 +1,94 @@
-import os
-import ctypes
-from cryptography.fernet import Fernet, InvalidToken
-from scapy.all import *
+import logging
+from scapy.all import IP, TCP, sr1, ICMP
+from ipaddress import ip_network
 
-# Check if tkinter is available
-try:
-    import tkinter as tk
-    from tkinter import messagebox
-    tkinter_available = True
-except ModuleNotFoundError:
-    print("tkinter module not found. Ransomware simulation feature will be disabled.")
-    tkinter_available = False
+# Configure logging
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+logger = logging.getLogger(__name__)
 
-# Function to generate and save a new encryption key
-def generate_key():
-    key = Fernet.generate_key()
-    with open("encryption_key.key", "wb") as key_file:
-        key_file.write(key)
-
-# Function to load the existing encryption key
-def load_key():
-    with open("encryption_key.key", "rb") as key_file:
-        return key_file.read()
-
-# Function to encrypt a file using the provided key
-def encrypt_file(filepath, key):
-    fernet = Fernet(key)
-    with open(filepath, "rb") as file:
-        encrypted_data = fernet.encrypt(file.read())
-    with open(filepath, "wb") as file:
-        file.write(encrypted_data)
-
-# Function to decrypt a file using the provided key
-def decrypt_file(filepath, key):
-    fernet = Fernet(key)
-    with open(filepath, "rb") as file:
-        decrypted_data = fernet.decrypt(file.read())
-    with open(filepath, "wb") as file:
-        file.write(decrypted_data)
-
-# Function to encrypt a string
-def encrypt_string(text, key):
-    return Fernet(key).encrypt(text.encode()).decode()
-
-# Function to decrypt a string with error handling
-def decrypt_string(text, key):
+def validate_port_range(start_port, end_port):
     try:
-        return Fernet(key).decrypt(text.encode()).decode()
-    except InvalidToken:
-        return "Decryption failed: Invalid token. Check if the message is correct and the correct key is used."
+        # Validate and convert start and end port numbers
+        start_port, end_port = int(start_port), int(end_port)
+        if start_port > end_port or start_port < 1 or end_port > 65535:
+            raise ValueError("Invalid port range")
+        return start_port, end_port
+    except ValueError:
+        raise ValueError("Invalid port numbers")
 
-# Function to change the desktop wallpaper
-def change_wallpaper(image_path):
-    ctypes.windll.user32.SystemParametersInfoW(20, 0, image_path, 0)
+def tcp_port_scanner(target_ip, start_port, end_port):
+    # Validate port range
+    start_port, end_port = validate_port_range(start_port, end_port)
+    online_ports = []
 
-# Function to create a popup window with a ransomware message
-def show_ransomware_popup(message):
-    if tkinter_available:
-        root = tk.Tk()
-        root.withdraw()
-        messagebox.showwarning("Ransomware Alert", message)
-        root.destroy()
-    else:
-        print("Ransomware message: ", message)
+    # Loop through ports and scan
+    for port in range(start_port, end_port + 1):
+        try:
+            packet = IP(dst=target_ip) / TCP(dport=port, flags="S")
+            response = sr1(packet, timeout=1, verbose=0)
+            if response is None:
+                logger.info(f"Port {port}: Filtered or dropped")
+            elif response.haslayer(TCP):
+                if response[TCP].flags == 0x12:
+                    logger.info(f"Port {port} is open")
+                    sr1(IP(dst=target_ip) / TCP(dport=port, flags="R"), timeout=1, verbose=0)
+                    online_ports.append(port)
+                elif response[TCP].flags == 0x14:
+                    logger.info(f"Port {port}: Closed")
+        except Exception as e:
+            logger.error(f"Error scanning port {port}: {e}")
 
-# Function to simulate a ransomware attack
-def ransomware_simulation():
-    wallpaper_image_path = "path_to_ransomware_wallpaper.jpg"
-    ransomware_message = "Your files have been encrypted! To decrypt them, send 1 Bitcoin to..."
-    change_wallpaper(wallpaper_image_path)
-    show_ransomware_popup(ransomware_message)
+    return online_ports
 
-# TCP Port Range Scanner
-def tcp_port_scan(host_ip, port_list):
-    for port in port_list:
-        packet = IP(dst=host_ip)/TCP(dport=port, flags='S')
-        response = sr1(packet, timeout=1, verbose=False)
-    if response is None:
-        print(f"Port {port}is filtered (no response).")
-    elif response.haslayer(TCP):
-        if response.getlayer(TCP).flags == 0x12:
-            # Send RST packet to close the connection
-            send(IP(dst=host_ip)/TCP(dport=port, flags='R'), timeout=1, verbose=False)
-            print(f"Port {port} is open.")
-        elif response.getlayer(TCP).flags == 0x14:
-            print(f"Port {port} is closed.")
+def validate_network(network):
+    try:
+        # Validate and convert network address
+        return str(ip_network(network).network_address)
+    except ValueError as e:
+        raise ValueError(f"Invalid network address: {e}")
 
-# Main function to handle user input and perform actions
+def icmp_ping_sweep(network):
+    # Validate network address
+    network = validate_network(network)
+    online_hosts = []
+
+    # Loop through hosts and ping
+    for address in ip_network(network).hosts():
+        try:
+            response = sr1(IP(dst=str(address)) / ICMP(), timeout=1, verbose=0)
+            if response is None:
+                logger.info(f"{address} is down or unresponsive.")
+            elif response.haslayer(ICMP):
+                if response[ICMP].type == 3 and response[ICMP].code in [1, 2, 3, 9, 10, 13]:
+                    logger.info(f"{address} is actively blocking ICMP traffic.")
+                else:
+                    logger.info(f"{address} is responding.")
+                    online_hosts.append(str(address))
+        except Exception as e:
+            logger.error(f"Error pinging {address}: {e}")
+
+    return online_hosts
+
 def main():
-    if not os.path.exists("encryption_key.key"):
-        generate_key()
-    key = load_key()
-
-    # Debug: Print the first few characters of the key for verification
-    print("Debug: Key (first 10 chars):", key[:10])
-
-    while True:
-        print("1. Encrypt a file\n2. Decrypt a file\n3. Encrypt a message\n4. Decrypt a message\n5. Ransomware Simulation (disabled if tkinter not installed)\n6. Exit")
-        mode = input("Enter the mode (1/2/3/4/5/6): ")
+    try:
+        mode = input("Select mode 1- TCP Port Scanner\n            2- ICMP Ping Sweep ")
 
         if mode == '1':
-            filepath = input("Enter file path to encrypt: ")
-            encrypt_file(filepath, key)
-            print("File encrypted successfully.")
+            target_ip = input("Enter the target IP address: ")
+            start_port = input("Enter the start port: ")
+            end_port = input("Enter the end port: ")
+            online_ports = tcp_port_scanner(target_ip, start_port, end_port)
+            logger.info(f"{len(online_ports)} ports are open: {online_ports}")
+
         elif mode == '2':
-            filepath = input("Enter file path to decrypt: ")
-            decrypt_file(filepath, key)
-            print("File decrypted successfully.")
-        elif mode == '3':
-            text = input("Enter message to encrypt: ")
-            print("Encrypted message:", encrypt_string(text, key))
-        elif mode == '4':
-            text = input("Enter encrypted message: ")
-            decrypted_message = decrypt_string(text, key)
-            print("Decrypted message:", decrypted_message)
-        elif mode == '5' and tkinter_available:
-            ransomware_simulation()
-            print("Ransomware simulation executed.")
-        elif mode == '6':
-            print("Goodbye!")
-            break
+            network = input("Enter the network address with CIDR (e.g., 192.168.1.0/24): ")
+            online_hosts = icmp_ping_sweep(network)
+            logger.info(f"{len(online_hosts)} hosts are online: {online_hosts}")
+
         else:
-            print("Invalid mode. Please choose 1, 2, 3, 4, 5, or 6.")
+            logger.error("Invalid choice. Please enter 1 or 2.")
+    except Exception as e:
+        logger.error(f"An error occurred: {e}")
 
 if __name__ == "__main__":
     main()
