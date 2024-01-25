@@ -1,3 +1,10 @@
+#!/usr/bin/env python3
+# Rodolfo Gonzalez
+# 01-23-2024
+# Challenge 11: Network Security Tool with Scapy 2 of 3
+'''References:
+ https://chat.openai.com/share/9b839495-a143-457a-8cdc-813ff371c93c '''
+
 # Import the necessary modules
 Import-Module -Name NetSecurity -Force
 

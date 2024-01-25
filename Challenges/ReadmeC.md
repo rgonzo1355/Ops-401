@@ -12,7 +12,8 @@
 - [10: Empty](Challenge6.py)
 - [11: Network Security Tool with Scapy 1 of 3](Challenge11.py)
 - [12: Network Security Tool with Scapy 2 of 3](Challenge12.py)
-- [10: Network Security Tool with Scapy 3 of 3](Challenge13.py)
+- [10: Network Security Tool with Scapy 3 of 3 (more choices)](Challenge13.py)
+- [10: Network Security Tool with Scapy (more direct code) 3b of 3](Challenge13b.py)
 - 
 - [11:  ](Challenge7.py)
 - [12: ](Challenge8.py)

@@ -29,7 +29,7 @@ def tcp_port_scanner(target_ip, port_range):
                     print(f"Port {port}: Closed")
         except Exception as e:
             print(f"Error scanning port {port}: {e}")
-
+##############################################################################################
 def icmp_ping_sweep(network):
     try:
         addresses = [str(ip) for ip in ip_network(network).hosts()]
