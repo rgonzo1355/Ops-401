@@ -8,7 +8,8 @@ This Python code combines ICMP ping and TCP port scanning functionalities into a
 It prompts the user for a target IP address, start and end port numbers, performs an ICMP ping sweep to check host responsiveness, 
 and then scans the specified range of ports, reporting their status. The code provides a comprehensive network scanning tool for the user.
 References:
- https://chat.openai.com/share/9b839495-a143-457a-8cdc-813ff371c93c '''
+ https://chat.openai.com/share/9b839495-a143-457a-8cdc-813ff371c93c 
+ '''
 
 ####################################################################################################
 # Import necessary libraries
@@ -79,22 +80,26 @@ def main():
         # Perform ICMP ping sweep first
         icmp_ping_sweep(target_ip)
 
-        # If the host is responsive, proceed with port scanning
-        if "is responding." in icmp_ping_sweep.output:
-            while True:
-                try:
-                    port_range_input = input("\033[94mEnter the range of ports to scan (e.g., 22-55): \033[0m")
-                    start_port, end_port = map(int, port_range_input.split("-"))
+        # Prompt for port range input
+        while True:
+            try:
+                port_range_input = input("\033[94mEnter the range of ports to scan (e.g., 22-55): \033[0m")
+                start_port, end_port = map(int, port_range_input.split("-"))
 
-                    if start_port > end_port:
-                        print("Start port must be less than end port. Please try again.")
-                    else:
-                        break
-                except ValueError:
-                    print("Input Error!")
+                if start_port > end_port:
+                    print("Start port must be less than end port. Please try again.")
+                else:
+                    break
+            except ValueError:
+                print("Input Error!")
 
-            port_range = range(start_port, end_port + 1)
+        port_range = range(start_port, end_port + 1)
 
-           
+        # Perform TCP port scanning
+        tcp_port_scanner(target_ip, port_range)
 
-           
+    except Exception as e:
+        print(f"Error: {e}")
+
+if __name__ == "__main__":
+    main()
