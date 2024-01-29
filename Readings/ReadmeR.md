@@ -17,7 +17,7 @@
 - [13: Reconstructing a Cloud Attack](Read13.md)  <!-- Link to 'Read: Class 13' document -->
 - [14: Intrusion Detection and Prevention Systems (IDS/IPS)](Read14.md)  <!-- Link to 'Read: Class 14' document -->
 - [Read: Class 15](Read15.md)  <!-- Link to 'Read: Class 15' document -->
-- [Read: Class 16](Read16.md)  <!-- Link to 'Read: Class 16' document -->
+- [16:Cloud Identity and Access Management IAM AWS](Read16.md)  <!-- Link to 'Read: Class 16' document -->
 - [Read: Class 17](Read17.md)  <!-- Link to 'Read: Class 17' document -->
 - [Read: Class 18](Read18.md)  <!-- Link to 'Read: Class 18' document -->
 - [Read: Class 19](Read19.md)  <!-- Link to 'Read: Class 19' document -->
