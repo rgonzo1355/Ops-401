@@ -17,4 +17,7 @@
 - 
 - [11:  ](Challenge7.py)
 - [12: ](Challenge8.py)
-
+- [16: Automated Brute Force Wordlist Attack Tool 1 of 3](Challenge16.py)
+- [17: Automated Brute Force Wordlist Attack Tool 2 of 3](Challenge17.py)
+- [18: Automated Brute Force Wordlist Attack Tool 3 of 3](Challenge18.py)
+- [19:
