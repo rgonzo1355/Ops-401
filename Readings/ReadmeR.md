@@ -20,7 +20,7 @@
 - [16:Cloud Identity and Access Management IAM AWS](Read16.md)  <!-- Link to 'Read: Class 16' document -->
 - [17: Cloud Network Security](Read17.md)  <!-- Link to 'Read: Class 17' document -->
 - [18: Logging and Monitoring CloudWatch](Read18.md)  <!-- Link to 'Read: Class 18' document -->
-- [Read: Class 19](Read19.md)  <!-- Link to 'Read: Class 19' document -->
+- [19: Cloud Detective Controls](Read19.md)  <!-- Link to 'Read: Class 19' document -->
 - [Read: Class 20](Read20.md)  <!-- Link to 'Read: Class 20' document -->
 - [Read: Class 21](Read21.md)  <!-- Link to 'Read: Class 21' document -->
 - [Read: Class 22](Read22.md)  <!-- Link to 'Read: Class 22' document -->
