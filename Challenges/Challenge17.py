@@ -3,6 +3,13 @@
 # Rodolfo Gonzalez
 # January 30 2024
 
+# Purpose: Challenge 16: Automate Brute Force Wordlis Attack Tool 1 of 3
+
+
+"""Resourcers:
+https://chat.openai.com/share/3903bda9-1e4e-41b3-a73b-8f383ad80b63
+https://www.geeksforgeeks.org/iterate-over-a-set-in-python/"""
+
 
 import time
 import os
@@ -139,7 +146,7 @@ def dictionary_iterator_mode(wordlist_path, lines_to_read):
     except KeyboardInterrupt:
         print("Operation aborted by the user.")
 
-##################### === Main program ===###################
+################################# === Main program ===###############################
 if __name__ == "__main__":
     while True:
         print("\033[35mSelect a mode:\033[0m")
