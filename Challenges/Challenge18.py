@@ -5,6 +5,9 @@
 
 # Purpose: Challenge 16: Automate Brute Force Wordlis Attack Tool 3 of 3
 
+# Contribuitors: Jose Cano
+# https://chat.openai.com/share/8e58c5f9-5ce0-4b2f-be90-8b4976b045a1 
+
 import time
 import paramiko
 import zipfile
