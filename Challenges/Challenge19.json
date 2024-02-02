@@ -1,0 +1,129 @@
+[
+    {
+      "AccountId": "449303403065",
+      "Arn": "arn:aws:guardduty:us-west-1:449303403065:detector/78c6b313ecacede6edd579b5c441848c/finding/02136aac449648b99d6c2a8b373b9528",
+      "CreatedAt": "2024-02-01T19:33:02.030Z",
+      "Description": "2 security risk(s) detected including EICAR-Test-File on ECS Cluster GeneratedFindingECSClusterName.",
+      "Id": "02136aac449648b99d6c2a8b373b9528",
+      "Partition": "aws",
+      "Region": "us-west-1",
+      "Resource": {
+        "ResourceType": "ECSCluster",
+        "EbsVolumeDetails": {
+          "ScannedVolumeDetails": [
+            {
+              "VolumeArn": "arn:aws:ec2:us-west-2:123456789000:volume/vol-09d5050dea915943d",
+              "VolumeType": "GeneratedScannedVolumeType",
+              "DeviceName": "GeneratedScannedDeviceName",
+              "VolumeSizeInGB": 8,
+              "EncryptionType": "UNENCRYPTED",
+              "SnapshotArn": "arn:aws:ec2:us-east-2:123456789000:snapshot/snap-12345678901234567",
+              "KmsKeyArn": null
+            }
+          ]
+        },
+        "EcsClusterDetails": {
+          "Name": "GeneratedFindingECSClusterName",
+          "Arn": "arn:aws:ecs:region:123456789000:cluster/clusterName",
+          "Status": "ACTIVE",
+          "Tags": [
+            {
+              "Key": "GeneratedFindingECSClusterTag1",
+              "Value": "GeneratedFindingECSClusterTagValue1"
+            },
+            {
+              "Key": "GeneratedFindingECSClusterTag2",
+              "Value": "GeneratedFindingECSClusterTagValue2"
+            },
+            {
+              "Key": "GeneratedFindingECSClusterTag3",
+              "Value": "GeneratedFindingECSClusterTagValue3"
+            }
+          ],
+          "TaskDetails": {
+            "Arn": "arn:aws:ecs:region:123456789000:task/mycluster/043de9ab3",
+            "DefinitionArn": "arn:aws:ecs:region:123456789000:task-definition/mycluster/76f1f1asdf",
+            "Version": "1",
+            "TaskCreatedAt": "2021-12-08T23:23:50.000Z",
+            "StartedAt": "2021-12-08T23:23:50.000Z",
+            "StartedBy": "GeneratedFindingECSTaskStartedBy",
+            "Containers": [
+              {
+                "Name": "GeneratedFindingContainerName",
+                "Image": "GeneratedFindingContainerImage"
+              }
+            ]
+          }
+        }
+      },
+      "SchemaVersion": "2.0",
+      "Service": {
+        "Archived": false,
+        "Count": 1,
+        "DetectorId": "78c6b313ecacede6edd579b5c441848c",
+        "EventFirstSeen": "2024-02-01T19:33:02.000Z",
+        "EventLastSeen": "2024-02-01T19:33:02.000Z",
+        "ServiceName": "guardduty",
+        "AdditionalInfo": {
+          "Value": "{\"sample\":true}",
+          "Type": "default"
+        },
+        "FeatureName": "EbsVolumeScan",
+        "EbsVolumeScanDetails": {
+          "ScanId": "bd6ce77dcacb163330a1a40ec143f851",
+          "ScanStartedAt": "2021-12-09T00:45:03.000Z",
+          "ScanCompletedAt": "2021-12-09T00:53:46.000Z",
+          "TriggerFindingId": "aebf726700725c2ffe5a2418d71b91wd",
+          "Sources": [
+            "Bitdefender"
+          ],
+          "ScanDetections": {
+            "ScannedItemCount": {
+              "TotalGb": 1,
+              "Files": 65226,
+              "Volumes": 1
+            },
+            "ThreatsDetectedItemCount": {
+              "Files": 2
+            },
+            "HighestSeverityThreatDetails": {
+              "Severity": "HIGH",
+              "ThreatName": "EICAR-Test-File",
+              "Count": 2
+            },
+            "ThreatDetectedByName": {
+              "ItemCount": 2,
+              "UniqueThreatNameCount": 1,
+              "Shortened": false,
+              "ThreatNames": [
+                {
+                  "Name": "EICAR-Test-File",
+                  "Severity": "HIGH",
+                  "ItemCount": 2,
+                  "FilePaths": [
+                    {
+                      "FilePath": "tmp/eicar.com",
+                      "VolumeArn": "arn:aws:ec2:us-west-2:123456789000:volume/vol-09d5050dea915943d",
+                      "Hash": "275a021bbfb6489e54d471899f7db9d1663fc345ec2fe2a2c4538aabf651fd0f",
+                      "FileName": "eicar.com"
+                    },
+                    {
+                      "FilePath": "tmp/eicar-2.txt",
+                      "VolumeArn": "arn:aws:ec2:us-west-2:123456789000:volume/vol-09d5050dea915943d",
+                      "Hash": "275a021bbfb6489e54d471899f7db9d2363fc345ec2fe2a2c4538aabf651ad0x",
+                      "FileName": "eicar-2.txt"
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          "ScanType": "GUARDDUTY_INITIATED"
+        }
+      },
+      "Severity": 8,
+      "Title": "2 security risk(s) detected including EICAR-Test-File on ECS Cluster GeneratedFindingECSClusterName.",
+      "Type": "Execution:ECS/MaliciousFile",
+      "UpdatedAt": "2024-02-01T19:33:02.030Z"
+    }
+  ]
