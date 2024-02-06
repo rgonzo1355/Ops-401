@@ -1,13 +1,14 @@
 #!/usr/bin/env python3
 # Script Name:                  Ops 18 Automated Brute Force Wordlist Attack Tool Part 3 of 3
-# Author:                       Juan Miguel Cano
+# Author:                       JRodolfo Gonzalez
 # Date of latest revision:      01/31/2024      
+
 # Purpose:                      Provides four modes for interacting with a word list file, allowing users to
 # Purpose cont:                 either iterate through the list with delays (simulating a dictionary attack), 
 # Purpose cont:                 search for specific words within the list, authenticate to an SSH server by its IP address,
 # Purpose cont:                 or perform a brute force attack on a password-locked zip file.
 # Resource:                     https://chat.openai.com/share/6fa45c27-3231-47cf-a6fa-3d855cf80f79
-# Team member:                  Rodolfo Gonzalez
+# Team member:                  J. Cano
 
 import time
 import paramiko
