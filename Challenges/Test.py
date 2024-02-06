@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # Script Name:                  Ops 18 Automated Brute Force Wordlist Attack Tool Part 3 of 3
-# Author:                       JRodolfo Gonzalez
+# Author:                       Rodolfo Gonzalez
 # Date of latest revision:      01/31/2024      
 
 # Purpose:                      Provides four modes for interacting with a word list file, allowing users to
