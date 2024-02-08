@@ -8,7 +8,7 @@
 # Purpose cont:                 search for specific words within the list, authenticate to an SSH server by its IP address,
 # Purpose cont:                 or perform a brute force attack on a password-locked zip file.
 # Resource:                     https://chat.openai.com/share/6fa45c27-3231-47cf-a6fa-3d855cf80f79
-# Team member:                  J. Cano
+# Team member:                  JC
 
 import time
 import paramiko
