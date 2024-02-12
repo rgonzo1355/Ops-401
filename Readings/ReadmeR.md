@@ -22,8 +22,8 @@
 - [18: Logging and Monitoring CloudWatch](Read18.md)  <!-- Link to 'Read: Class 18' document -->
 - [19: Cloud Detective Controls](Read19.md)  <!-- Link to 'Read: Class 19' document -->
 - [20-25 Empty](Read20.md)  <!-- Link to 'Read: Class 20' document -->
-- [26:Remote Code Execution](Read26.md)  <!-- Link to 'Read: Class 26' document -->
-- [Read: Class 27](Read27.md)  <!-- Link to 'Read: Class 27' document -->
+- [26: Remote Code Execution](Read26.md)  <!-- Link to 'Read: Class 26' document -->
+- [27: Persistence](Read27.md)  <!-- Link to 'Read: Class 27' document -->
 - [Read: Class 28](Read28.md)  <!-- Link to 'Read: Class 28' document -->
 - [Read: Class 29](Read29.md)  <!-- Link to 'Read: Class 29' document -->
 - [Read: Class 30](Read30.md)  <!-- Link to 'Read: Class 30' document -->
