@@ -21,13 +21,8 @@
 - [17: Cloud Network Security](Read17.md)  <!-- Link to 'Read: Class 17' document -->
 - [18: Logging and Monitoring CloudWatch](Read18.md)  <!-- Link to 'Read: Class 18' document -->
 - [19: Cloud Detective Controls](Read19.md)  <!-- Link to 'Read: Class 19' document -->
-- [Read: Class 20](Read20.md)  <!-- Link to 'Read: Class 20' document -->
-- [Read: Class 21](Read21.md)  <!-- Link to 'Read: Class 21' document -->
-- [Read: Class 22](Read22.md)  <!-- Link to 'Read: Class 22' document -->
-- [Read: Class 23](Read23.md)  <!-- Link to 'Read: Class 23' document -->
-- [Read: Class 24](Read24.md)  <!-- Link to 'Read: Class 24' document -->
-- [Read: Class 25](Read25.md)  <!-- Link to 'Read: Class 25' document -->
-- [Read: Class 26](Read26.md)  <!-- Link to 'Read: Class 26' document -->
+- [20-25 Empty](Read20.md)  <!-- Link to 'Read: Class 20' document -->
+- [26:Remote Code Execution](Read26.md)  <!-- Link to 'Read: Class 26' document -->
 - [Read: Class 27](Read27.md)  <!-- Link to 'Read: Class 27' document -->
 - [Read: Class 28](Read28.md)  <!-- Link to 'Read: Class 28' document -->
 - [Read: Class 29](Read29.md)  <!-- Link to 'Read: Class 29' document -->
