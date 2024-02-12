@@ -25,7 +25,7 @@
 - [26: Remote Code Execution](Read26.md)  <!-- Link to 'Read: Class 26' document -->
 - [27: Persistence](Read27.md)  <!-- Link to 'Read: Class 27' document -->
 - [28: Log Clearing](Read28.md)  <!-- Link to 'Read: Class 28' document -->
-- [Read: Class 29](Read29.md)  <!-- Link to 'Read: Class 29' document -->
+- [29: Modeling a Web Application](Read29.md)  <!-- Link to 'Read: Class 29' document -->
 - [Read: Class 30](Read30.md)  <!-- Link to 'Read: Class 30' document -->
 - [Read: Class 31](Read31.md)  <!-- Link to 'Read: Class 31' document -->
 - [Read: Class 32](Read32.md)  <!-- Link to 'Read: Class 32' document -->
