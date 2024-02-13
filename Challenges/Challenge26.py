@@ -2,11 +2,12 @@
 
 # Rodolfo Gonzalez
 # February 12 2024
-
+# Challenge 27          Event Logging Tool 1 of 3.
 """The code implements a Python script that manipulates a list of fruits, performing various operations such as appending, 
 inserting, removing, and sorting elements. It incorporates logging capabilities to record these operations, 
 categorizing log messages by severity with corresponding colors, and outputs them to a log file for monitoring and analysis. 
 The script enhances readability and user engagement by infusing a playful theme centered around fruits, making the logging process informative and enjoyable."""
+# Contribuitors: Juan Cano
 
 
 
