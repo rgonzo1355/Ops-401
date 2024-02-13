@@ -22,3 +22,7 @@
 - [18: Automated Brute Force Wordlist Attack Tool 3 of 3](Challenge18.py)
 - [19:JSON file from AWS Lab 19](Challenge19.json)
 - 
+- [26: Event Logging Tool 1 lf 3](Challenge26.py)
+- [27: Event Logging Tool 1 lf 3](Challenge27.py)
+- [28: Event Logging Tool 1 lf 3](Challenge28.py)
+

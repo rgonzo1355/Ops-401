@@ -1,0 +1,53 @@
+2024-02-12 18:36:07,633 - INFO - Printed the fourth element of the list
+2024-02-12 18:36:07,633 - INFO - Printed the sixth through tenth elements of the list
+2024-02-12 18:36:07,633 - INFO - Updated the list by changing the value of the seventh element
+2024-02-12 18:36:07,633 - INFO - Appended "Marine" to the list
+2024-02-12 18:36:07,633 - INFO - Cleared the list
+2024-02-12 18:36:07,633 - INFO - Created a copy of the original list
+2024-02-12 18:36:07,634 - INFO - Counted occurrences of "Pfc" in the list
+2024-02-12 18:36:07,634 - WARNING - 'SSgt' is not in the list
+2024-02-12 18:36:07,634 - INFO - Inserted "GySgt" at index 1 in the list
+2024-02-12 18:36:07,634 - INFO - Removed an element at index 3 from the list
+2024-02-12 18:36:07,634 - WARNING - 'SSgt' is not in the list
+2024-02-12 18:36:07,634 - INFO - Reversed the order of elements in the list
+2024-02-12 18:36:07,634 - INFO - Sorted the list
+2024-02-12 18:40:46,468 - INFO - [32mFourth element: Cpl[0m
+2024-02-12 18:40:46,468 - INFO - [32mSixth through tenth elements: ['SSgt', 'GySgt', 'MGySgt', '1stSgt', 'SgtMaj'][0m
+2024-02-12 18:40:46,468 - INFO - [32mUpdated list: ['Pvt', 'PFC', 'LCpl', 'Cpl', 'Sgt', 'SSgt', 'SNCO', 'MGySgt', '1stSgt', 'SgtMaj'][0m
+2024-02-12 18:40:46,468 - INFO - [32mList after appending 'Marine': ['Pvt', 'PFC', 'LCpl', 'Cpl', 'Sgt', 'SSgt', 'SNCO', 'MGySgt', '1stSgt', 'SgtMaj', 'Marine'][0m
+2024-02-12 18:40:46,468 - INFO - [32mList after clearing: [][0m
+2024-02-12 18:40:46,468 - INFO - [32mOriginal list: ['Pvt', 'Pfc', 'LCpl'][0m
+2024-02-12 18:40:46,468 - INFO - [32mCopied list: ['Pvt', 'Pfc', 'LCpl'][0m
+2024-02-12 18:40:46,468 - INFO - [32mCount of 'Pfc': 1[0m
+2024-02-12 18:40:46,468 - INFO - [33m'SSgt' is not in the list[0m
+2024-02-12 18:40:46,468 - WARNING - 'SSgt' is not in the list
+2024-02-12 18:40:46,468 - INFO - [32mList after inserting 'GySgt' at index 1: ['Pvt', 'GySgt', 'Pfc', 'LCpl', 'NCO', 'SNCO'][0m
+2024-02-12 18:40:46,468 - INFO - [32mRemoved element at index 3: LCpl[0m
+2024-02-12 18:40:46,469 - INFO - [32mList after pop: ['Pvt', 'GySgt', 'Pfc', 'NCO', 'SNCO'][0m
+2024-02-12 18:40:46,469 - INFO - [33mCannot remove 'SSgt' from the list: 'SSgt' is not in the list[0m
+2024-02-12 18:40:46,469 - WARNING - 'SSgt' is not in the list
+2024-02-12 18:40:46,469 - INFO - [32mReversed list: ['SNCO', 'NCO', 'Pfc', 'GySgt', 'Pvt'][0m
+2024-02-12 18:40:46,469 - INFO - [32mSorted list: ['GySgt', 'NCO', 'Pfc', 'Pvt', 'SNCO'][0m
+2024-02-12 18:40:46,469 - INFO - [32mTuple: ('Pvt', 'Pfc', 'LCpl')[0m
+2024-02-12 18:40:46,469 - INFO - [32mSet: {'Pfc', 'LCpl', 'Pvt'}[0m
+2024-02-12 18:40:46,469 - INFO - [32mDictionary: {'Marines1': 'Pvt', 'Marines2': 'Pfc', 'Marines3': 'LCpl'}[0m
+2024-02-12 18:56:21,418 - INFO - [32mFourth element: Durian[0m
+2024-02-12 18:56:21,418 - INFO - [32mSixth through tenth elements: ['Fig', 'Grape', 'Honeydew', 'Kiwi', 'Lemon'][0m
+2024-02-12 18:56:21,418 - INFO - [32mUpdated list: ['Apple', 'Banana', 'Cherry', 'Durian', 'Elderberry', 'Fig', 'Mango', 'Honeydew', 'Kiwi', 'Lemon'][0m
+2024-02-12 18:56:21,418 - INFO - [32mList after appending 'Orange': ['Apple', 'Banana', 'Cherry', 'Durian', 'Elderberry', 'Fig', 'Mango', 'Honeydew', 'Kiwi', 'Lemon', 'Orange'][0m
+2024-02-12 18:56:21,419 - INFO - [32mList after clearing: [][0m
+2024-02-12 18:56:21,419 - INFO - [32mOriginal list: ['Apple', 'Banana', 'Cherry'][0m
+2024-02-12 18:56:21,419 - INFO - [32mCopied list: ['Apple', 'Banana', 'Cherry'][0m
+2024-02-12 18:56:21,419 - INFO - [32mCount of 'Banana': 1[0m
+2024-02-12 18:56:21,419 - INFO - [33m'Mango' is not in the list[0m
+2024-02-12 18:56:21,419 - WARNING - 'Mango' is not in the list
+2024-02-12 18:56:21,419 - INFO - [32mList after inserting 'Papaya' at index 1: ['Apple', 'Papaya', 'Banana', 'Cherry', 'Grapefruit', 'Pineapple'][0m
+2024-02-12 18:56:21,419 - INFO - [32mRemoved element at index 3: Cherry[0m
+2024-02-12 18:56:21,419 - INFO - [32mList after pop: ['Apple', 'Papaya', 'Banana', 'Grapefruit', 'Pineapple'][0m
+2024-02-12 18:56:21,419 - INFO - [33mCannot remove 'Mango' from the list: 'Mango' is not in the list[0m
+2024-02-12 18:56:21,419 - WARNING - 'Mango' is not in the list
+2024-02-12 18:56:21,419 - INFO - [32mReversed list: ['Pineapple', 'Grapefruit', 'Banana', 'Papaya', 'Apple'][0m
+2024-02-12 18:56:21,419 - INFO - [32mSorted list: ['Apple', 'Banana', 'Grapefruit', 'Papaya', 'Pineapple'][0m
+2024-02-12 18:56:21,419 - INFO - [32mTuple: ('Apple', 'Banana', 'Cherry')[0m
+2024-02-12 18:56:21,419 - INFO - [32mSet: {'Apple', 'Banana', 'Cherry'}[0m
+2024-02-12 18:56:21,419 - INFO - [32mDictionary: {'Fruits1': 'Apple', 'Fruits2': 'Banana', 'Fruits3': 'Cherry'}[0m
