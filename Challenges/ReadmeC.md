@@ -29,10 +29,10 @@
 - [19:JSON file from AWS Lab 19](Challenge19.json)
 - 
 # Module 6: Threat Modeling and Analysis
-- [26: Event Logging Tool 1 lf 3](Challenge26.py)
-- [27: Event Logging Tool 2 lf 3](Challenge27.py)
-- [28: Event Logging Tool 3 lf 3](Challenge28.py)
-- [28: Event Logging Tool 3b lf 3](Challenge28b.py)
+- [26: Event Logging Tool 1  of 3](Challenge26.py)
+- [27: Event Logging Tool 2  of 3](Challenge27.py)
+- [28: Event Logging Tool 3  of 3](Challenge28.py)
+- [28: Event Logging Tool 3b of 3](Challenge28b.py)
 - [29:  ](Challenge29.py)
 - [30:  ](Challenge30.py)
 
