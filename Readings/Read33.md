@@ -20,7 +20,7 @@
 - Active Countermeasures (AC) is an excellent resource for threat-hunting tools and topics. They provide valuable insights, training, and tools for organizations looking to enhance their threat-hunting capabilities.
 
 ### SQRLL Archive
-- Sqrrl Archive contains foundational documents about threat-hunting best practices. It offers valuable resources and knowledge for organizations interested in learning more about threat-hunting methodologies and techniques.
+- SQRLL Archive contains foundational documents about threat-hunting best practices. It offers valuable resources and knowledge for organizations interested in learning more about threat-hunting methodologies and techniques.
 
 ## Resources
 - [What Is Threat Hunting and Why Is It so Important? – Video Blog (Active Countermeasures)](https://www.activecountermeasures.com/what-is-threat-hunting-and-why-is-it-so-important-video-blog/)

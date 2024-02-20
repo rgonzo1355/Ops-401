@@ -30,7 +30,7 @@
 - [Empty](Read31.md)  <!-- Link to 'Read: Class 31' document -->
 - [32: Malware Traffic Analysis with Wireshark](Read32.md)  <!-- Link to 'Read: Class 32' document -->
 - [33: Threat Hunting with Security Onion](Read33.md)  <!-- Link to 'Read: Class 33' document -->
-- [Read: Class 34](Read34.md)  <!-- Link to 'Read: Class 34' document -->
+- [34: Forensics Investigation with Autopsy](Read34.md)  <!-- Link to 'Read: Class 34' document -->
 - [Read: Class 35](Read35.md)  <!-- Link to 'Read: Class 35' document -->
 - [Read: Class 36](Read36.md)  <!-- Link to 'Read: Class 36' document -->
 - [Read: Class 37](Read37.md)  <!-- Link to 'Read: Class 37' document -->
