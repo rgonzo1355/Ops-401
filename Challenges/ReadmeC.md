@@ -37,9 +37,9 @@
 - [30:  ](Challenge30.py)
 
 # Module 7: Threat Hunting
-- [31
-- [32
-- [33
+- [31: Signature-based Malware Detection 1 of 3
+- [32: Signature-based Malware Detection 2 of 3
+- [33: Signature-based Malware Detection 3 of 3
 - [34
 - [35
 
