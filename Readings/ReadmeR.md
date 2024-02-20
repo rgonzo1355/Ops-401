@@ -26,7 +26,7 @@
 - [27: Persistence](Read27.md)  <!-- Link to 'Read: Class 27' document -->
 - [28: Log Clearing](Read28.md)  <!-- Link to 'Read: Class 28' document -->
 - [29: Modeling a Web Application](Read29.md)  <!-- Link to 'Read: Class 29' document -->
-- [Read: Class 30](Read30.md)  <!-- Link to 'Read: Class 30' document -->
+- [30: Empty](Read30.md)  <!-- Link to 'Read: Class 30' document -->
 - [Empty](Read31.md)  <!-- Link to 'Read: Class 31' document -->
 - [32: Malware Traffic Analysis with Wireshark](Read32.md)  <!-- Link to 'Read: Class 32' document -->
 - [33: Threat Hunting with Security Onion](Read33.md)  <!-- Link to 'Read: Class 33' document -->
