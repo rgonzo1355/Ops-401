@@ -27,8 +27,8 @@
 - [28: Log Clearing](Read28.md)  <!-- Link to 'Read: Class 28' document -->
 - [29: Modeling a Web Application](Read29.md)  <!-- Link to 'Read: Class 29' document -->
 - [Read: Class 30](Read30.md)  <!-- Link to 'Read: Class 30' document -->
-- [Read: Class 31](Read31.md)  <!-- Link to 'Read: Class 31' document -->
-- [Read: Class 32](Read32.md)  <!-- Link to 'Read: Class 32' document -->
+- [Empty](Read31.md)  <!-- Link to 'Read: Class 31' document -->
+- [Malware Traffic Analysis with Wireshark](Read32.md)  <!-- Link to 'Read: Class 32' document -->
 - [Read: Class 33](Read33.md)  <!-- Link to 'Read: Class 33' document -->
 - [Read: Class 34](Read34.md)  <!-- Link to 'Read: Class 34' document -->
 - [Read: Class 35](Read35.md)  <!-- Link to 'Read: Class 35' document -->
