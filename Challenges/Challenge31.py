@@ -1,3 +1,12 @@
+#!/usr/bin/python3
+# Challenge 32 Singnature-based malware Detection Part 1 of 3
+
+# Rodolfo Gonzalez
+# 02-20-2024
+
+'''This script searches for files by name within a specified directory and lists root-level directories. 
+It offers a menu-driven interface for file searching and directory listing, enhancing command-line file management.'''
+
 import os
 
 def search_file(file_name, directory):

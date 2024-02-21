@@ -1,4 +1,9 @@
-import os
+#!/usr/bin/python3
+# Rodolfo Gonzalez
+# 02-20-2024
+# Challenge 32 Singnature-based malware Detection Part 2 of 3
+2
+mport os
 import hashlib
 import inspect
 
