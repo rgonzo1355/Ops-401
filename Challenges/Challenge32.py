@@ -5,7 +5,8 @@
 
 '''This code allows users to search for specific files within a specified directory and its subdirectories. 
 Then, it offers the option to calculate and display the SHA-1 hash of any found files. The purpose is to help verify the integrity of files, 
-ensuring they have not been altered or corrupted, and to facilitate locating files within complex directory structures.'''
+ensuring they have not been altered or corrupted, and to facilitate locating files within complex directory structures.
+Resources: https://chat.openai.com/share/3e517b39-bcc1-4502-88fe-0f09576ca8f9 '''
 
 import os
 import hashlib
