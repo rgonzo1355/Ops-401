@@ -1,3 +1,14 @@
+#!/usr/bin/python3
+# Rodolfo Gonzalez
+# 02-21-2024
+# Challenge 32 Singnature-based malware Detection Part 3 of 3
+
+'''
+
+Resources: https://chat.openai.com/share/3e517b39-bcc1-4502-88fe-0f09576ca8f9 
+
+'''
+
 import os
 import hashlib
 import requests  # Ensure you have the 'requests' library installed
