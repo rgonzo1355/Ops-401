@@ -3,6 +3,11 @@
 # 02-21-2024
 # Challenge 32 Signature-based Malware Detection Part 3 of 3
 
+"""The provided script searches for a specific file (secret.txt) within a specified directory (/home) and its subdirectories. 
+When a matching file is found, it computes the MD5 hash of the file and offers the user the option to check this hash against the 
+VirusTotal database using an external script (virus total-search.py). If the user agrees, the script executes the external script with 
+the file's hash and the user's VirusTotal API key to determine if the file is recognized as malicious based on VirusTotal's records."""
+
 import os
 import hashlib
 import requests  # Ensure the 'requests' library is installed for fallback or additional HTTP requests
