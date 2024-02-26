@@ -44,7 +44,7 @@
 - [35
 
 # Module 8: Web Application Security
-- [36
+- [36: Web Application Fingerprinting](Challenge36.py)
 - [37
 - [38
 - [39
