@@ -35,7 +35,7 @@
 - [36: XSS with w3af, DVWA](Read36.md)  <!-- Link to 'Read: Class 36' document -->
 - [37: Automated AppSec with ZAP](Read37.md)  <!-- Link to 'Read: Class 37' document -->
 - [38: Attacking Juice Shop with Burp Suite](Read38.md)  <!-- Link to 'Read: Class 38' document -->
-- [Read: Class 39](Read39.md)  <!-- Link to 'Read: Class 39' document -->
+- [39: SQLi with Burp Suite, WebGoat ](Read39.md)  <!-- Link to 'Read: Class 39' document -->
 - [Read: Class 40](Read40.md)  <!-- Link to 'Read: Class 40' document -->
 - [Read: Class 41](Read41.md)  <!-- Link to 'Read: Class 41' document -->
 - [Read: Class 42](Read42.md)  <!-- Link to 'Read: Class 42' document -->
