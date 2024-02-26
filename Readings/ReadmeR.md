@@ -32,7 +32,7 @@
 - [33: Threat Hunting with Security Onion](Read33.md)  <!-- Link to 'Read: Class 33' document -->
 - [34: Forensics Investigation with Autopsy](Read34.md)  <!-- Link to 'Read: Class 34' document -->
 - [Read: Class 35](Read35.md)  <!-- Link to 'Read: Class 35' document -->
-- [Read: Class 36](Read36.md)  <!-- Link to 'Read: Class 36' document -->
+- [36: XSS with w 3af, DVWA](Read36.md)  <!-- Link to 'Read: Class 36' document -->
 - [Read: Class 37](Read37.md)  <!-- Link to 'Read: Class 37' document -->
 - [Read: Class 38](Read38.md)  <!-- Link to 'Read: Class 38' document -->
 - [Read: Class 39](Read39.md)  <!-- Link to 'Read: Class 39' document -->
