@@ -5,7 +5,8 @@
 
 '''The code performs banner grabbing, a technique used to gather information about network services running on a target system,
 by prompting the user for a URL/IP address and port number. It utilizes three different methods: Netcat, Telnet, 
-and Nmap to attempt connections to the specified target and port, then prints any responses or banners that these services send back.'''
+and Nmap to attempt connections to the specified target and port, then prints any responses or banners that these services send back. 
+Resources: https://chat.openai.com/share/4f1d8422-3120-41bf-a929-109ddf1053fc'''
 
 import subprocess
 
