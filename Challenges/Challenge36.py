@@ -1,3 +1,12 @@
+#!/usr/bin/env python3
+# Rodolfo Gonzalez
+# 02-26-2024
+# Challenge 36: Web Application Fingerprinting
+
+'''The code performs banner grabbing, a technique used to gather information about network services running on a target system,
+by prompting the user for a URL/IP address and port number. It utilizes three different methods: Netcat, Telnet, 
+and Nmap to attempt connections to the specified target and port, then prints any responses or banners that these services send back.'''
+
 import subprocess
 
 # Colors for better readability
