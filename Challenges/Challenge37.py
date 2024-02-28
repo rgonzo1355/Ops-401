@@ -8,7 +8,7 @@ and then prompts the user to select a cookie from the captured list. Subsequentl
 It displays the response text, facilitating interaction with websites or 
 APIs that require cookie-based authentication or session management. Additionally, it provides clear prompts and error handling for user input and HTTP requests."""
 
-mport requests
+import requests
 
 # Function to capture and display cookies from the response
 def capture_cookies(response):
