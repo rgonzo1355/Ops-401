@@ -45,7 +45,7 @@
 
 # Module 8: Web Application Security
 - [36: Web Application Fingerprinting](Challenge36.py)
-- [37
+- [37: Cookie Capture Capades](Challenge37.py)
 - [38
 - [39
 - [40
