@@ -37,7 +37,7 @@
 - [38: Attacking Juice Shop with Burp Suite](Read38.md)  <!-- Link to 'Read: Class 38' document -->
 - [39: SQLi with Burp Suite, WebGoat ](Read39.md)  <!-- Link to 'Read: Class 39' document -->
 - [Read: Class 40](Read40.md)  <!-- Link to 'Read: Class 40' document -->
-- [Read: Class 41](Read41.md)  <!-- Link to 'Read: Class 41' document -->
+- [41: Reconnaissance](Read41.md)  <!-- Link to 'Read: Class 41' document -->
 - [Read: Class 42](Read42.md)  <!-- Link to 'Read: Class 42' document -->
 - [Read: Class 43](Read43.md)  <!-- Link to 'Read: Class 43' document -->
 - [Read: Class 44](Read44.md)  <!-- Link to 'Read: Class 44' document -->
