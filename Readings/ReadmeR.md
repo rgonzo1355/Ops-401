@@ -39,6 +39,6 @@
 - [Read: Class 40](Read40.md)  <!-- Link to 'Read: Class 40' document -->
 - [41: Reconnaissance](Read41.md)  <!-- Link to 'Read: Class 41' document -->
 - [42: Pass the Hash with Mimikatz](Read42.md)  <!-- Link to 'Read: Class 42' document -->
-- [Read: Class 43](Read43.md)  <!-- Link to 'Read: Class 43' document -->
+- [43: Sniffing and Evasion](Read43.md)  <!-- Link to 'Read: Class 43' document -->
 - [Read: Class 44](Read44.md)  <!-- Link to 'Read: Class 44' document -->
 
