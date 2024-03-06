@@ -53,6 +53,6 @@
 # Module 9: Penetration Testing
 - [41
 - [42: Attack Tools 2 of 3 nmap](Challenge42.py)
-- [43
+- [43: Create a Port Scanner](Challenge43.py)
 - [44
 - [45
