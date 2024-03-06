@@ -52,7 +52,7 @@
 
 # Module 9: Penetration Testing
 - [41
-- [42
+- [42: Attack Tools 2 of 3 nmap](Challenge42.py)
 - [43
 - [44
 - [45
