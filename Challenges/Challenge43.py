@@ -1,5 +1,12 @@
 #!/usr/bin/python3
+# Rodolfo Gonzalez
+# 03-6-2024
 
+# Challenge 43: Create a port scanner
+
+'''This Python code prompts the user to input a host IP address and a port range. 
+It then scans the specified range of ports on the provided host IP address to determine whether each port is open or closed, 
+using multithreading for concurrent scanning and ANSI escape codes to colorize the output based on the port status (open or closed).'''
 import socket
 import concurrent.futures
 
