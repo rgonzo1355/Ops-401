@@ -10,6 +10,7 @@ Finally, it displays scan results such as Nmap version, IP status, and open port
 You will need to make sure that following are installed: 
 -sudo apt-get install python3-pip
 -sudo pip3 install python-nmap
+-You will also need sudo.
 """
 
 
