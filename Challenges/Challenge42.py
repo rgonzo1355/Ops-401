@@ -13,55 +13,64 @@ You will need to make sure that following are installed:
 -You will also need sudo.
 """
 
-
 import nmap
 from colorama import Fore, Style
 
+# Initialize the scanner once, at the start
 scanner = nmap.PortScanner()
 
-print(Fore.MAGENTA + "Nmap Automation Tool" + Style.RESET_ALL)
-print("--------------------")
+# Wrap your scanning logic in a while loop
+while True:
+    print(Fore.MAGENTA + "Nmap Automation Tool" + Style.RESET_ALL)
+    print("--------------------")
 
-ip_addr = input("Enter the IP address to scan: ")
-print("The IP you entered is:", ip_addr)
+    ip_addr = input("Enter the IP address to scan: ")
+    print("The IP you entered is:", ip_addr)
 
-resp = input(Fore.MAGENTA + """\nSelect scan to execute:
+    resp = input(Fore.MAGENTA + """\nSelect scan to execute:
                 1) SYN ACK Scan
                 2) UDP Scan
                 3) TCP Connect Scan\n""" + Style.RESET_ALL)
-print(Fore.MAGENTA + "You have selected option:", resp + Style.RESET_ALL)
+    print(Fore.MAGENTA + "You have selected option:", resp + Style.RESET_ALL)
 
-port_range = input("Enter port range (e.g., 1-100): ")
+    port_range = input("Enter port range (e.g., 1-100): ")
 
-if resp == '1':
-    print(Fore.GREEN + "Nmap Version:", '.'.join(map(str, scanner.nmap_version())) + Style.RESET_ALL)
-    scanner.scan(ip_addr, port_range, '-v -sS')
-    print(scanner.scaninfo())
-    print(Fore.GREEN + "IP Status:", scanner[ip_addr].state() + Style.RESET_ALL)
-    print(scanner[ip_addr].all_protocols())
-    if 'tcp' in scanner[ip_addr]:
-        print(Fore.GREEN + "Open Ports:", list(scanner[ip_addr]['tcp'].keys()) + Style.RESET_ALL)
+    if resp == '1':
+        print(Fore.GREEN + "Nmap Version:", '.'.join(map(str, scanner.nmap_version())) + Style.RESET_ALL)
+        scanner.scan(ip_addr, port_range, '-v -sS')
+        print(scanner.scaninfo())
+        print(Fore.GREEN + "IP Status:", scanner[ip_addr].state() + Style.RESET_ALL)
+        print(scanner[ip_addr].all_protocols())
+        if 'tcp' in scanner[ip_addr]:
+            print(Fore.GREEN + "Open Ports:" + ', '.join(map(str, scanner[ip_addr]['tcp'].keys())) + Style.RESET_ALL)
+        else:
+            print(Fore.RED + "No open TCP ports found." + Style.RESET_ALL)
+    elif resp == '2':
+        print(Fore.GREEN + "Nmap Version:", '.'.join(map(str, scanner.nmap_version())) + Style.RESET_ALL)
+        scanner.scan(ip_addr, port_range, '-v -sU')
+        print(scanner.scaninfo())
+        print(Fore.GREEN + "IP Status:", scanner[ip_addr].state() + Style.RESET_ALL)
+        print(scanner[ip_addr].all_protocols())
+        if 'udp' in scanner[ip_addr]:
+            print(Fore.GREEN + "Open Ports:" + ', '.join(map(str, scanner[ip_addr]['udp'].keys())) + Style.RESET_ALL)
+        else:
+            print(Fore.RED + "No open UDP ports found." + Style.RESET_ALL)
+    elif resp == '3':
+        print(Fore.GREEN + "Nmap Version:", '.'.join(map(str, scanner.nmap_version())) + Style.RESET_ALL)
+        scanner.scan(ip_addr, port_range, '-v -sT')
+        print(scanner.scaninfo())
+        print(Fore.GREEN + "IP Status:", scanner[ip_addr].state() + Style.RESET_ALL)
+        print(scanner[ip_addr].all_protocols())
+        if 'tcp' in scanner[ip_addr]:
+            print(Fore.GREEN + "Open Ports:" + ', '.join(map(str, scanner[ip_addr]['tcp'].keys())) + Style.RESET_ALL)
+        else:
+            print(Fore.RED + "No open TCP ports found." + Style.RESET_ALL)
     else:
-        print(Fore.RED + "No open TCP ports found." + Style.RESET_ALL)
-elif resp == '2':
-    print(Fore.GREEN + "Nmap Version:", '.'.join(map(str, scanner.nmap_version())) + Style.RESET_ALL)
-    scanner.scan(ip_addr, port_range, '-v -sU')
-    print(scanner.scaninfo())
-    print(Fore.GREEN + "IP Status:", scanner[ip_addr].state() + Style.RESET_ALL)
-    print(scanner[ip_addr].all_protocols())
-    if 'udp' in scanner[ip_addr]:
-        print(Fore.GREEN + "Open Ports:", list(scanner[ip_addr]['udp'].keys()) + Style.RESET_ALL)
-    else:
-        print(Fore.RED + "No open UDP ports found." + Style.RESET_ALL)
-elif resp == '3':
-    print(Fore.GREEN + "Nmap Version:", '.'.join(map(str, scanner.nmap_version())) + Style.RESET_ALL)
-    scanner.scan(ip_addr, port_range, '-v -sT')
-    print(scanner.scaninfo())
-    print(Fore.GREEN + "IP Status:", scanner[ip_addr].state() + Style.RESET_ALL)
-    print(scanner[ip_addr].all_protocols())
-    if 'tcp' in scanner[ip_addr]:
-        print(Fore.GREEN + "Open Ports:", list(scanner[ip_addr]['tcp'].keys()) + Style.RESET_ALL)
-    else:
-        print(Fore.RED + "No open TCP ports found." + Style.RESET_ALL)
-else:
-    print(Fore.RED + "Please enter a valid option" + Style.RESET_ALL)
+        print(Fore.RED + "Please enter a valid option" + Style.RESET_ALL)
+
+    # Check if the user wants to run another scan
+    again = input("\nDo you want to run another scan? (yes/no): ").strip().lower()
+    if again != 'yes':
+        break  # Exit the loop if the user does not want to run another scan
+
+print("Thank you for using the Nmap Automation Tool. Goodbye!")
